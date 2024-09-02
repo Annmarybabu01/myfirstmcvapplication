@@ -1,0 +1,125 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registeration Page</title>
+    <!-- jQuery UI library -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <!-- jQuery library -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- jQuery UI library -->
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <link rel="stylesheet" href="~/Content/registerationStyle.css" />
+    <script src="buttonplugin.js"></script>
+</head>
+<body id="bodyStyle">
+    <div class="container">
+        <div>
+            <heading id="mainHeading">Create Your Account</heading>
+        </div>
+        <div>
+            <heading id="subHeading">Join us today and start your journey! </heading>
+        </div>
+        <form>
+            <div id="persoanlInformationSection">
+                <heading id="persoanlInformationHeading">Personal Information</heading>
+                <div class="inputField">
+                    <input type="text" id="firstName" name="firstName" placeholder="">
+                    <label>Firstname</label>
+                    <div id="firstNameErrorMessage" class="error"></div>
+                </div>
+                <div class="inputField">
+                    <input type="text" id="lastName" name="lastName" placeholder="">
+                    <label>Lastname</label>
+                    <div id="lastNameErrorMessage" class="error"></div>
+                </div>
+                <div class="dateOfBirthSection">
+                    <label>Date of Birth</label>
+                    <input type="date" id="dateOfBirth" name="dateOfBirth" onclick="setMaxDate()">
+                    <div id="dateOfBirthErrorMessage" class="error"></div>
+                </div>
+                <div class="genderColumn">
+                    <label>Gender</label>
+                    <div class="subColumn">
+                        <div>
+                            <input type="radio" id="male" name="gender" value="male" />
+                            <label>Male</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="female" name="gender" value="female" />
+                            <label>Female</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="other" name="gender" value="other" />
+                            <label>Other</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="contactInformationSection">
+                <heading id="contactInformationHeading">Contact Information</heading>
+                <div class="phoneNumberSection">
+                    <label>Phone Number</label>
+                    <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="+1(555)123-4567">
+                    <div id="phoneNumberErrorMessage" class="error"></div>
+                </div>
+                <div class="inputField">
+                    <input type="email" id="email" name="email" placeholder="">
+                    <label>Email Address</label>
+                    <div id="emailErrorMessage" class="error"></div>
+                </div>
+            </div>
+            <div id="addressSection">
+                <heading id="addressHeading">Address</heading>
+                <div class="inputFieldSpecial">
+                    <textarea id="address" name="address" placeholder=""></textarea>
+                    <label>Address</label>
+                    <div id="addressErrorMessage" class="error"></div>
+                </div>
+                <div class="stateSection">
+                    <label>State </label>
+                    <select name="state" id="state">
+                        <option value="">Select a state</option>
+                        <option value="california">California</option>
+                        <option value="florida">Florida</option>
+                        <option value="georgia">Georgia</option>
+                    </select>
+                </div>
+                <div class="citySection">
+                    <label>City</label>
+                    <select id="city">
+                        <option value="">Select a city</option>
+                        <!-- Cities will be populated based on selected state -->
+                    </select>
+                </div>
+            </div>
+            <div id="accountInformation">
+                <heading id="accountInformationHeading">Account Information</heading>
+                <div class="inputField">
+                    <input type="text" id="userName" name="userName" placeholder="">
+                    <label>Username</label>
+                    <div id="userNameErrorMessage" class="error"></div>
+                </div>
+                <div class="inputField">
+                    <input type="password" id="password" name="password" placeholder="">
+                    <label>Password</label>
+                    <div id="passwordErrorMessage" class="error"></div>
+                </div>
+                <div class="inputField">
+                    <input type="password" id="confirmPassword" name="confirmPassword" placeholder="">
+                    <label>Confirm Password</label>
+                    <div id="confirmPasswordErrorMessage" class="error"></div>
+                    <div id="passMessage"></div>
+                </div>
+            </div>
+            <div id="signUpButtonSection">
+                <button type="submit" id="signUpButton" value="signUp">Sign Up</button>
+            </div>
+            <div id="logInComment">Already have an account? <a id="logInLink" href="login.html" target="_self">Login</a></div>
+            <!--<div class="backButton"></div>-->
+        </form>
+    </div>
+    <script src="~/Scripts/registerationScript.js"></script>
+</body>
+</html>
